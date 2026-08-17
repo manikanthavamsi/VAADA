@@ -591,3 +591,38 @@ footer { text-align: center; padding: 2rem; background: rgba(3, 21, 23, 0.9); ba
     box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
     color: #fff;
 }
+
+/* Animated Credit Marquee */
+.credit-marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background: rgba(5, 38, 42, 0.9);
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    padding: 15px 0;
+    white-space: nowrap;
+    position: relative;
+    backdrop-filter: blur(10px);
+    z-index: 10;
+}
+
+.credit-marquee {
+    display: inline-block;
+    animation: scrollMarquee 30s linear infinite;
+}
+
+.credit-marquee span {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin-right: 40px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+@keyframes scrollMarquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.credit-marquee:hover {
+    animation-play-state: paused;
+}
