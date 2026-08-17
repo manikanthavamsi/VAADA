@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vamsi Adbhutha wedding</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css?v=3">
+</head>
+<body class="locked">
+
+    <!-- Global Crossfading Background System -->
+    <div id="global-background">
+        <!-- Image 1: Home & Subhalekha -->
+        <div class="bg-layer active" id="bg-layer-1">
+            <img src="bg1.jpg" class="bg-blur" alt="">
+            <img src="bg1.jpg" class="bg-sharp" alt="">
+            <div class="bg-dark-overlay"></div>
+        </div>
+        
+        <!-- Image 2: Events -->
+        <div class="bg-layer" id="bg-layer-2">
+            <img src="Flute.jpg" class="bg-blur" alt="">
+            <img src="Flute.jpg" class="bg-sharp" alt="">
+            <div class="bg-dark-overlay"></div>
+        </div>
+        
+        <!-- Image 3: Gallery -->
+        <div class="bg-layer" id="bg-layer-3">
+            <img src="Radhakrishn.jpg" class="bg-blur" alt="">
+            <img src="Radhakrishn.jpg" class="bg-sharp" alt="">
+            <div class="bg-dark-overlay"></div>
+        </div>
+
+        <!-- Image 4: RSVP -->
+        <div class="bg-layer" id="bg-layer-4">
+            <img src="Radha Krishna.jpg" class="bg-blur" alt="">
+            <img src="Radha Krishna.jpg" class="bg-sharp" alt="">
+            <div class="bg-dark-overlay"></div>
+        </div>
+    </div>
+
+    <!-- Enter Overlay -->
+    <div id="enter-overlay">
+        <div class="enter-content">
+            <h2 class="text-gold" style="font-family: var(--font-heading); margin-bottom: 20px;">Welcome to the Divine Celebration</h2>
+            <p class="text-light" style="margin-bottom: 40px;">Turn on your sound for the full experience</p>
+            <button id="enter-btn" class="btn primary-btn" onclick="document.getElementById('enter-overlay').style.display='none'; document.body.classList.remove('locked');">Enter Wedding</button>
+        </div>
+    </div>
+
+    <!-- Audio Element -->
+    <audio id="bg-music" loop preload="auto">
+        <source src="alanati_ramachandruni.m4a" type="audio/mp4">
+        <source src="alanati_ramachandruni.mp4" type="video/mp4">
+        <source src="bansuri.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Audio Toggle Button -->
+    <button id="audio-toggle" class="audio-toggle-btn">
+        <svg id="audio-icon-on" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+        <svg id="audio-icon-off" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+    </button>
+
+    <!-- Floating WhatsApp Share Button -->
+    <a id="whatsapp-share" class="whatsapp-float-btn" href="#" target="_blank" rel="noopener noreferrer" title="Share Invitation on WhatsApp">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="#fff"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        <span>Share Invitation</span>
+    </a>
+
+    <!-- Floating Petals Container -->
+    <div id="petals-container" class="petals-container"></div>
+
+    <nav id="navbar">
+        <div class="nav-brand"><span class="brand-va">#VA</span><span class="brand-ada" style="color: #f7cad0 !important; text-shadow: 0 0 12px rgba(247, 202, 208, 0.6);">ADA</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#invitation">Subhalekha</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#saptapadi">Saptapadi</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#rsvp">RSVP</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <svg class="feather-icon reveal-fade" viewBox="0 0 100 100" width="80" height="80">
+                <path d="M50 0 Q70 40 50 100 Q30 40 50 0" fill="#167d46" opacity="0.8"/>
+                <circle cx="50" cy="30" r="15" fill="#0b4c53"/>
+                <circle cx="50" cy="30" r="8" fill="#d4af37"/>
+            </svg>
+
+            <!-- Mask Reveal Structure -->
+            <div class="reveal-mask-container">
+                <h3 class="subtitle reveal-mask delay-1" style="color: #fffdf0 !important; text-shadow: 0 2px 12px rgba(0,0,0,0.9), 0 0 15px rgba(255,224,102,0.7); font-weight: 600;">A Divine Union</h3>
+            </div>
+            
+            <div class="couple-names">
+                <div class="reveal-mask-container">
+                    <h1 class="bride reveal-mask delay-2">Adbhutha</h1>
+                </div>
+                <div class="reveal-mask-container">
+                    <span class="weds reveal-mask delay-3">weds</span>
+                </div>
+                <div class="reveal-mask-container">
+                    <h1 class="groom reveal-mask delay-4">Vamsi</h1>
+                </div>
+            </div>
+            
+            <div class="date-container reveal-fade delay-5">
+                <div class="date-line"></div>
+                <p class="wedding-date" style="color: #fffdf0 !important; text-shadow: 0 2px 12px rgba(0,0,0,0.9), 0 0 20px rgba(255,224,102,0.8);">27th August 2026 | Thursday</p>
+                <div class="date-line"></div>
+            </div>
+            
+            <div class="countdown-container reveal-fade delay-6">
+                <div class="countdown-item glass-panel">
+                    <span id="days">00</span>
+                    <span class="label">Days</span>
+                </div>
+                <div class="countdown-item glass-panel">
+                    <span id="hours">00</span>
+                    <span class="label">Hours</span>
+                </div>
+                <div class="countdown-item glass-panel">
+                    <span id="minutes">00</span>
+                    <span class="label">Mins</span>
+                </div>
+                <div class="countdown-item glass-panel">
+                    <span id="seconds">00</span>
+                    <span class="label">Secs</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="arrow"></div>
+        </div>
+    </section>
+
+    <!-- Invitation Section -->
+    <section id="invitation" class="invitation-section">
+        <div class="container">
+            <!-- Language Toggle Tabs -->
+            <div class="lang-toggle-container text-center reveal-fade">
+                <button class="lang-tab-btn active" id="tab-en" onclick="switchLanguage('en')">English Subhalekha</button>
+                <button class="lang-tab-btn" id="tab-te" onclick="switchLanguage('te')">తెలుగు పెండ్లి పిలుపు</button>
+            </div>
+
+            <!-- English Invitation Card -->
+            <div class="card subhalekha-card glass-panel reveal-slide-up" id="subhalekha-en">
+                <div class="card-border">
+                    <div class="card-inner">
+                        <div class="sacred-sloka text-gold reveal-fade">
+                            <p>Srirasthu &nbsp;•&nbsp; Subhamasthu &nbsp;•&nbsp; Avighnamasthu</p>
+                            <p class="sloka-sub">|| Om Sri Maha Ganadhipathaye Namaha ||</p>
+                        </div>
+
+                        <h2 class="invitation-family-title text-gold reveal-mask">PRABHALA'S</h2>
+                        <h3 class="invitation-sub-title text-light">Wedding Invitation</h3>
+                        
+                        <div class="floral-divider reveal-fade delay-2"><span>❁</span></div>
+
+                        <div class="hosts-info text-light reveal-fade delay-3">
+                            <p class="hosts-names text-gold">Dr. PVSSSR Krishna & Smt. Padmavathi</p>
+                            <p class="designation small-text">The Principal, Kendriya Vidyalaya Teacher's Colony, Type 4 Quarters, Tirupati.</p>
+                            <p class="invitation-phrase">Cordially invite you with family and friends to grace the auspicious occasion of the marriage of their son</p>
+                        </div>
+
+                        <div class="couple-details reveal-fade delay-4">
+                            <h3 class="groom-name text-gold">Chi. Manikantha Vamsi Krishna</h3>
+                            <p class="with-text text-light">with</p>
+                            <h3 class="bride-name text-gold">Chi.La.Sow. Venkata Naga Manasadevi Adbhutha</h3>
+                            <div class="bride-parents text-light">
+                                <p>D/o. Prof. V. Ramesh Babu & Dr. Naga Sudhavani</p>
+                                <p class="qualification">Professor, Dept. of Mathematics, NSU, TPT.</p>
+                                <p class="small-text">Tiruchanoor, Tirupati.</p>
+                            </div>
+                        </div>
+
+                        <div class="event-highlights-grid reveal-fade delay-5">
+                            <div class="highlight-box">
+                                <h4 class="box-title text-gold">SUBHA MUHURTHAM</h4>
+                                <p class="box-date text-light">27-08-2026 Thursday at 11:06 A.M.</p>
+                                <p class="box-detail text-gold">in Subha Thula Lagnam</p>
+                            </div>
+                            <div class="highlight-box">
+                                <h4 class="box-title text-gold">VENUE</h4>
+                                <p class="box-date text-light">HARI HARA SADAN</p>
+                                <p class="box-detail text-light">Leftside (East Facing), Annavaram up Hills, Annavaram, A.P.</p>
+                            </div>
+                            <div class="highlight-box">
+                                <h4 class="box-title text-gold">LUNCH</h4>
+                                <p class="box-date text-light">27-08-2026 Thursday</p>
+                                <p class="box-detail text-light">from 1:00 p.m. onwards</p>
+                            </div>
+                        </div>
+
+                        <p class="compliments text-gold reveal-fade delay-6">With best Compliments from: Family Members - Relatives & Friends</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Telugu Invitation Card (Hidden by Default) -->
+            <div class="card subhalekha-card glass-panel reveal-slide-up" id="subhalekha-te" style="display: none;">
+                <div class="card-border">
+                    <div class="card-inner telugu-card-content">
+                        <div class="sacred-sloka text-gold">
+                            <p>శ్రీరస్తు &nbsp;•&nbsp; శుభమస్తు &nbsp;•&nbsp; అవిఘ్నమస్తు</p>
+                            <p class="sloka-sub">***** నమామి వేదమాతరమ్ *****</p>
+                        </div>
+
+                        <h2 class="invitation-family-title text-gold">ప్రభల వారి పెండ్లిపిలుపు</h2>
+                        
+                        <div class="sloka-box text-gold">
+                            <p>శ్లో|| కళ్యాణాద్భుత గాత్రాయ కామితార్థ ప్రదాయినే |<br>శ్రీమద్వేంకట నాథాయ శ్రీనివాసాయ మంగళం ||</p>
+                        </div>
+
+                        <div class="floral-divider"><span>❁</span></div>
+
+                        <p class="invitation-text text-light">
+                            స్వస్తిశ్రీ చాంద్రమానేన శ్రీ పరాభవ నామ సంవత్సర శ్రావణ శుద్ధ పూర్ణిమ గురువారం <strong>27-08-2026</strong> వ తేదీ ఉదయం <strong>11:06 ని॥</strong> లకు ధనిష్ఠ నక్షత్రయుక్త తులా లగ్న పుష్కరాంశము నందు
+                        </p>
+
+                        <div class="couple-details">
+                            <p class="text-light">మా కుమారుడు</p>
+                            <h3 class="groom-name text-gold">చి॥ మణికంఠ వంశీకృష్ణ</h3>
+                            <p class="telugu-transition-text">అను వరునకు</p>
+                            <p class="bride-parents text-light">తిరుపతి, తిరుచానూరు వాస్తవ్యులు బ్రహ్మశ్రీ వాజపేయాయాజుల రమేష్ బాబు - శ్రీమతి నాగసుధావాణి గార్ల కుమార్తె</p>
+                            <h3 class="bride-name text-gold">చి॥ల॥సౌ॥ వేంకట నాగ మానసదేవి అద్భుత</h3>
+                            <p class="telugu-transition-text">అను వధువును ఇచ్చి వివాహము జరిపించుటకు పెద్దలు సుముహూర్తము నిశ్చయించినారు...</p>
+                        </div>
+
+                        <div class="event-highlights-grid">
+                            <div class="highlight-box">
+                                <h4 class="box-title text-gold">కళ్యాణవేదిక</h4>
+                                <p class="box-date text-light">హరి హర సదన్</p>
+                                <p class="box-detail text-light">ఎడమ ప్రక్క (తూర్పు), అన్నవరం కొండపైన, అన్నవరం, ఆం.ప్ర.</p>
+                            </div>
+                            <div class="highlight-box">
+                                <h4 class="box-title text-gold">విందు</h4>
+                                <p class="box-date text-light">27-08-2026 వ తేదీ గురువారం</p>
+                                <p class="box-detail text-light">మధ్యాహ్నం 1:00 గంట నుండి</p>
+                            </div>
+                        </div>
+
+                        <div class="hosts-info text-light" style="margin-top: 1.5rem;">
+                            <p class="invitation-phrase text-gold">మీ ఆగమనాభిలాషులు:</p>
+                            <p class="hosts-names text-gold">శ్రీ ప్రభల వేంకట శ్రీనివాస సత్య శివరామకృష్ణ - శ్రీమతి పద్మావతి</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events-section transparent-section">
+        <div class="container">
+            <div class="reveal-mask-container text-center">
+                <h2 class="section-title text-gold reveal-mask">Wedding Ceremonies</h2>
+            </div>
+            <div class="floral-divider text-center reveal-fade"><span>❁</span></div>
+            <div class="timeline">
+                
+                <div class="event-card glass-panel left reveal-slide-up">
+                    <div class="event-content">
+                        <h3 class="event-title">Haldi & Mehendi</h3>
+                        <p class="event-date text-gold">August 23rd, 2026</p>
+                        <p class="event-time text-light">10:00 AM Onwards</p>
+                        <p class="event-desc text-light">Join us for a morning of vibrant colors, music, and joy as we kick off the celebrations.</p>
+                    </div>
+                </div>
+
+                <div class="event-card glass-panel right reveal-slide-up delay-2">
+                    <div class="event-content">
+                        <h3 class="event-title">Edurukolu & Sangeet</h3>
+                        <p class="event-date text-gold">August 26th, 2026</p>
+                        <p class="event-time text-light">7:00 PM Onwards</p>
+                        <p class="event-desc text-light">Welcoming the groom's family followed by an evening of music, dance, and joyous celebration!</p>
+                    </div>
+                </div>
+
+                <div class="event-card glass-panel center highlight-event reveal-slide-up delay-3">
+                    <div class="event-content">
+                        <h3 class="event-title">The Subha Muhurtham</h3>
+                        <p class="event-date text-gold">August 27th, 2026</p>
+                        <p class="event-time text-light">11:06 AM in Subha Thula Lagnam (Dhanishta Nakshatram)</p>
+                        <p class="event-location text-gold" style="margin: 0.5rem 0; font-size: 1.1rem; font-weight: 600;">📍 Hari Hara Sadan (Annavaram Up Hills)</p>
+                        <p class="event-desc text-light">The sacred moment we tie the knot. Feast / Lunch from 1:00 PM onwards.</p>
+                        
+                        <div class="action-buttons-group">
+                            <a href="https://maps.app.goo.gl/NcSa3G8N5KXwxpJu9" target="_blank" rel="noopener noreferrer" class="btn primary-btn">📍 View Venue on Maps</a>
+                            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Adbhutha+%26+Vamsi+Wedding+%28Subha+Muhurtham%29&dates=20260827T053600Z/20260827T093000Z&details=Subha+Muhurtham+of+Chi.+Manikantha+Vamsi+Krishna+weds+Chi.La.Sow.+Venkata+Naga+Manasadevi+Adbhutha+in+Subha+Thula+Lagnam.&location=Hari+Hara+Sadan%2C+Leftside+%28East+Facing%29%2C+Annavaram+Up+Hills%2C+Annavaram%2C+Andhra+Pradesh" target="_blank" rel="noopener noreferrer" class="btn calendar-btn">📅 Add to Google Calendar</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Annavaram Travel & Reach Guide Card -->
+            <div class="travel-guide-card glass-panel reveal-slide-up" style="margin-top: 3.5rem; padding: 2.5rem; text-align: center; border-radius: 18px;">
+                <h3 class="section-title text-gold" style="font-size: 1.8rem; margin-bottom: 1.5rem;">✈️ Travel & Reach Guide (Annavaram)</h3>
+                <div class="travel-grid">
+                    <div class="travel-box">
+                        <div class="travel-icon">✈️</div>
+                        <h4 class="text-gold">Nearest Airport</h4>
+                        <p class="text-light" style="margin-top: 4px;"><strong>Rajahmundry Airport (RJA)</strong></p>
+                        <p class="small-text text-gold" style="margin-top: 4px;">(~70 km to Annavaram)</p>
+                    </div>
+                    <div class="travel-box">
+                        <div class="travel-icon">🚆</div>
+                        <h4 class="text-gold">Nearest Railway Station</h4>
+                        <p class="text-light" style="margin-top: 4px;"><strong>Samalkot Junction (SLO)</strong></p>
+                        <p class="small-text text-gold" style="margin-top: 4px;">(~35 km / Major Junction)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Saptapadi Section -->
+    <section id="saptapadi" class="saptapadi-section transparent-section">
+        <div class="container">
+            <div class="reveal-mask-container text-center">
+                <h2 class="section-title text-gold reveal-mask">సప్తపది (Saptapadi)</h2>
+            </div>
+            <div class="floral-divider text-center reveal-fade"><span>❁</span></div>
+            <p class="text-light text-center reveal-fade delay-1" style="font-size: 1.2rem; margin-bottom: 2.5rem;">
+                The 7 Sacred Steps of Eternal Togetherness & Devotion
+            </p>
+
+            <div class="saptapadi-grid reveal-fade delay-2">
+                <div class="saptapadi-card glass-panel">
+                    <div class="step-num text-gold">Step 1</div>
+                    <div class="step-icon">👣</div>
+                    <h4 class="step-telugu text-gold">పరస్పరం అండగా నిలబడటానికి</h4>
+                    <p class="step-desc text-light">Standing together as pillars of mutual strength & support throughout life.</p>
+                </div>
+
+                <div class="saptapadi-card glass-panel">
+                    <div class="step-num text-gold">Step 2</div>
+                    <div class="step-icon">👣</div>
+                    <h4 class="step-telugu text-gold">సంతానాన్ని పరిరక్షించుకోవడానికి</h4>
+                    <p class="step-desc text-light">Nurturing and protecting future generations with love and wisdom.</p>
+                </div>
+
+                <div class="saptapadi-card glass-panel">
+                    <div class="step-num text-gold">Step 3</div>
+                    <div class="step-icon">👣</div>
+                    <h4 class="step-telugu text-gold">ఇరువురు ఏకమై శక్తిసామర్థ్యాలను పెంపొందించుకోవడానికి</h4>
+                    <p class="step-desc text-light">Uniting energies to foster spiritual, emotional, and material growth.</p>
+                </div>
+
+                <div class="saptapadi-card glass-panel">
+                    <div class="step-num text-gold">Step 4</div>
+                    <div class="step-icon">👣</div>
+                    <h4 class="step-telugu text-gold">జీవితాంతం స్నేహితులుగా మిగిలిపోవడానికి</h4>
+                    <p class="step-desc text-light">Cherishing lifelong friendship, trust, and transparent communication.</p>
+                </div>
+
+                <div class="saptapadi-card glass-panel">
+                    <div class="step-num text-gold">Step 5</div>
+                    <div class="step-icon">👣</div>
+                    <h4 class="step-telugu text-gold">సుఖదుఃఖాలను పంచుకోవడానికి</h4>
+                    <p class="step-desc text-light">Sharing life's triumphs and trials as inseparable equal partners.</p>
+                </div>
+
+                <div class="saptapadi-card glass-panel">
+                    <div class="step-num text-gold">Step 6</div>
+                    <div class="step-icon">👣</div>
+                    <h4 class="step-telugu text-gold">నిరంతరం సహజీవనం సాగించడానికి</h4>
+                    <p class="step-desc text-light">Walking hand-in-hand in harmony through all seasons of life.</p>
+                </div>
+
+                <div class="saptapadi-card glass-panel highlight-step">
+                    <div class="step-num text-gold">Step 7</div>
+                    <div class="step-icon">👣</div>
+                    <h4 class="step-telugu text-gold">సంపదను పరిరక్షించుకోవడానికి</h4>
+                    <p class="step-desc text-light">Preserving righteousness, sacred values, and divine prosperity together.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section transparent-section">
+        <div class="container">
+            <div class="reveal-mask-container text-center">
+                <h2 class="section-title text-gold reveal-mask">Eternal Love</h2>
+            </div>
+            <div class="floral-divider text-center reveal-fade"><span>❁</span></div>
+            <p class="text-light text-center reveal-fade delay-1" style="font-size: 1.2rem; margin-bottom: 2rem;">Two souls, one heart. Guided by divine light.</p>
+            
+            <div class="photo-grid reveal-fade delay-2">
+                <div class="photo-item glass-panel"><img src="memory1.jpg" alt="Memory 1 - Nischithartham Coconut Ritual"></div>
+                <div class="photo-item glass-panel"><img src="memory2.jpg" alt="Memory 2 - Ring Exchange Ceremony"></div>
+                <div class="photo-item glass-panel"><img src="memory5.jpg" alt="Memory 3 - Bride's Family Photo"></div>
+                <div class="photo-item glass-panel"><img src="memory4.jpg" alt="Memory 4 - Groom's Family Photo"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP & Wishes -->
+    <section id="rsvp" class="rsvp-section">
+        <div class="container">
+            <div class="rsvp-container glass-panel reveal-scale-up">
+                <h2 class="section-title text-gold">Send Your Blessings</h2>
+                <form class="rsvp-form" id="rsvpForm">
+                    <div class="form-group reveal-fade delay-1">
+                        <input type="text" placeholder="Your Name" required class="glass-input">
+                    </div>
+                    <div class="form-group reveal-fade delay-2">
+                        <input type="email" placeholder="Your Email (Optional)" class="glass-input">
+                    </div>
+                    <div class="form-group reveal-fade delay-3">
+                        <textarea placeholder="Your Wishes for the Couple..." rows="4" required class="glass-input"></textarea>
+                    </div>
+                    <button type="submit" class="btn primary-btn submit-btn reveal-fade delay-4">Send Blessings</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal for Full View -->
+    <div id="lightbox" class="lightbox-modal">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" alt="Gallery Photo" style="display:none;">
+        <video class="lightbox-content" id="lightbox-video" controls style="display:none;"></video>
+    </div>
+
+    <footer>
+        <p class="text-light">&copy; 2026 Adbhutha & Vamsi. All Rights Reserved.</p>
+        <p class="small-text text-gold">Created with divine love</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

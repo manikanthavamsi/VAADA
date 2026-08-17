@@ -1,0 +1,3 @@
+# This file is used to specify Python dependencies.
+# Since we are using the built-in python http.server to serve static files, 
+# no external libraries are required for deployment.
