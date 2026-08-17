@@ -139,28 +139,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 5. Floating Petals Generator
-    const petalsContainer = document.getElementById('petals-container');
-    const createPetal = () => {
-        const petal = document.createElement('div');
-        petal.classList.add('petal');
-        
-        const size = Math.random() * 15 + 10;
-        const leftPos = Math.random() * 100;
-        const fallDuration = Math.random() * 10 + 10;
-        const swayDuration = Math.random() * 3 + 2;
-        
-        petal.style.width = `${size}px`;
-        petal.style.height = `${size}px`;
-        petal.style.left = `${leftPos}vw`;
-        petal.style.animationDuration = `${fallDuration}s, ${swayDuration}s`;
-        
-        petalsContainer.appendChild(petal);
-        setTimeout(() => petal.remove(), fallDuration * 1000);
-    };
-
-    setInterval(createPetal, 1000);
-    for(let i=0; i<10; i++) { setTimeout(createPetal, Math.random() * 2000); }
 
     // 6. Countdown Timer
     const weddingDate = new Date('August 27, 2026 11:06:00').getTime();
