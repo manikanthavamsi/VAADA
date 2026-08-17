@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // 2. Play audio safely
         if (bgMusic) {
             bgMusic.volume = 0.4;
+            bgMusic.currentTime = 13; // Start from 0:13 seconds
             const playPromise = bgMusic.play();
             if (playPromise !== undefined) {
                 playPromise.then(() => {
