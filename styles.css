@@ -214,7 +214,8 @@ body.locked { overflow: hidden; }
 .countdown-item span:first-child { font-family: var(--font-heading); font-size: 2.5rem; color: var(--gold); font-weight: 700; display:block; }
 .countdown-item .label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-light); }
 
-.scroll-indicator { position: relative; margin-top: 50px; display: flex; flex-direction: column; align-items: center; animation: float 2s infinite ease-in-out; z-index: 10; }
+.scroll-indicator { position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; animation: float 2s infinite ease-in-out; z-index: 100; transition: opacity 0.5s ease; }
+.scroll-indicator.hidden { opacity: 0; pointer-events: none; }
 .scroll-indicator span { font-size: 1.2rem; font-weight: bold; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 8px; color: var(--gold); }
 .arrow { width: 25px; height: 25px; border-right: 3px solid var(--gold); border-bottom: 3px solid var(--gold); transform: rotate(45deg); }
 
