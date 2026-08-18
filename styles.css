@@ -219,6 +219,10 @@ body.locked { overflow: hidden; }
 .scroll-indicator span { font-size: 1.2rem; font-weight: bold; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 8px; color: var(--gold); }
 .arrow { width: 25px; height: 25px; border-right: 3px solid var(--gold); border-bottom: 3px solid var(--gold); transform: rotate(45deg); }
 
+.section-scroll-indicator { display: flex; flex-direction: column; align-items: center; margin-top: 50px; padding-bottom: 20px; animation: float 2s infinite ease-in-out; }
+.section-scroll-indicator span { font-size: 1rem; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 5px; color: var(--gold); }
+.section-scroll-indicator .arrow { width: 20px; height: 20px; border-right: 2px solid var(--gold); border-bottom: 2px solid var(--gold); transform: rotate(45deg); }
+
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
 
 /* Sections */
