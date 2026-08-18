@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // 2. Play audio safely
         if (bgMusic) {
-            bgMusic.volume = 0.4;
+            bgMusic.volume = 0.25;
             const playPromise = bgMusic.play();
             if (playPromise !== undefined) {
                 playPromise.then(() => {
